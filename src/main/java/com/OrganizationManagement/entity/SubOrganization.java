@@ -17,7 +17,7 @@ public class SubOrganization {
     private Long id;
     private String name;
     private String description;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "organization_id")
     private Organization organization;
 
